@@ -28,10 +28,11 @@ run the trigger script:
 
 `python main.py`
 
-*Note*: that you main run into some permissions errors related to access to /dev/mem, in which case add
+*Note*: You main run into some permissions errors related to access to /dev/mem, in which case add
 your user to the gpio group with `sudo usermod -aG gpio username` and optionally change permissions on /dev/gpiomem:
 
 `sudo chown root:gpio /dev/gpiomem`
+
 `sudo chmod g+rw /dev/gpiomem`
 
 This will toggle pin 11 between high and low, and on each trigger it should call the camera to take a photo.
